@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  margin-top: 200px;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(32, 1fr);
+  height: 300px;
+  width: 1500px;
+  border: 1px solid grey;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+
+.grid-item {
+  justify-self: center;
+  justify-items: center;
+  background-color: green;
+  justify-self: center;
+  width: 90%;
+  grid-row-start: 33;
+  grid-row-end: 1;
+}
