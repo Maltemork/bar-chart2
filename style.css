@@ -19,9 +19,14 @@ body {
   justify-content: center;
   justify-self: center;
   justify-items: center;
+  overflow: hidden;
 }
 
 .grid-item {
+  position: relative;
+  animation-name: scrolling-bar;
+  animation-duration: 1s;
+  animation-timing-function: linear;
   justify-self: center;
   justify-items: center;
   background-color: green;
@@ -29,4 +34,13 @@ body {
   width: 90%;
   grid-row-start: 33;
   grid-row-end: 1;
+}
+
+@keyframes scrolling-bar {
+  from {
+    left: 50%;
+  }
+  to {
+    left: -50%;
+  }
 }
