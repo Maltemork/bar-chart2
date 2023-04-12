@@ -3,6 +3,10 @@ window.addEventListener("load", start);
 
 const numArray = [];
 
+// hvis maxHeight ændres, skal .grid-container 2 {grid-template-rows} ændres til maxHeight-1.
+// hvis maxHeight ændres, skal .grid-item {grid-row-start} ændres til maxHeight+1.
+const maxHeight = 32;
+
 function start() {
   startParameters();
   countFunction();
@@ -14,6 +18,10 @@ function startParameters() {
     let number = getNumberOfCustomers();
     numArray.push(number);
   }
+}
+
+function getNumberOfCustomers() {
+  return Math.floor(Math.random() * maxHeight);
 }
 
 function countFunction() {
@@ -28,28 +36,24 @@ function countFunction() {
   });
 }
 
-function getNumberOfCustomers() {
-  return Math.floor(Math.random() * 32);
-}
-
 function insertIntoHTML(number) {
-  if (number > 28) {
+  if (number > maxHeight - 5) {
     document.querySelector("#grid-container2").insertAdjacentHTML(
       "afterbegin",
       /*html*/ `
             <div class="grid-item" style="grid-row-end: ${
-              32 - number
-            };background-color: red;" title="${number}">
+              maxHeight - number
+            };background-color: red;" onmouseover="mouseOverFunction(${number})" onmouseleave="mouseLeaveFunction()">
             </div>
         `
     );
-  } else if (number > 25) {
+  } else if (number > maxHeight - 10) {
     document.querySelector("#grid-container2").insertAdjacentHTML(
       "afterbegin",
       /*html*/ `
             <div class="grid-item" style="grid-row-end: ${
-              32 - number
-            };background-color: yellow;" title="${number}">
+              maxHeight - number
+            };background-color: yellow;" onmouseover="mouseOverFunction(${number})" onmouseleave="mouseLeaveFunction()">
             </div>
         `
     );
@@ -58,10 +62,18 @@ function insertIntoHTML(number) {
       "afterbegin",
       /*html*/ `
             <div class="grid-item" style="grid-row-end: ${
-              32 - number
-            }" title="${number}">
+              maxHeight - number
+            }" onmouseover="mouseOverFunction(${number})" onmouseleave="mouseLeaveFunction()">
             </div>
         `
     );
   }
+}
+
+function mouseOverFunction(number) {
+  document.querySelector("#display-number").textContent = `${number}`;
+}
+
+function mouseLeaveFunction() {
+  document.querySelector("#display-number").textContent = ``;
 }

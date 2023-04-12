@@ -1,7 +1,7 @@
 body {
   font-family: Cascadia Code;
   display: flex;
-  background: linear-gradient(90deg, rgb(88, 88, 88) 0%, rgb(65, 65, 65) 100%);
+  background: linear-gradient(90deg, rgb(0, 44, 75) 0%, rgb(45, 45, 45) 100%);
   color: white;
   margin: 0px;
   justify-content: center;
@@ -12,6 +12,11 @@ body {
 h1 {
   font-size: 30px;
   text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.176);
+}
+
+#display-number {
+  font-size: 80px;
+  color: white;
 }
 
 .grid-container1 {
@@ -26,6 +31,9 @@ h1 {
   justify-items: center;
   overflow: hidden;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.225);
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: rgb(0, 0, 0);
 }
 
 .grid-container2 {
@@ -53,7 +61,11 @@ h1 {
   justify-self: center;
   width: 90%;
   grid-row-start: 33;
-  grid-row-end: 1;
+  grid-row-end: 0;
+}
+
+.grid-item:hover {
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.516);
 }
 
 @keyframes scrolling-bar {
