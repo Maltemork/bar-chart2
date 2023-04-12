@@ -45,7 +45,7 @@ h1 {
 .grid-item {
   position: relative;
   animation-name: scrolling-bar;
-  animation-duration: 1s;
+  animation-duration: 1000ms;
   animation-timing-function: linear;
   justify-self: center;
   justify-items: center;

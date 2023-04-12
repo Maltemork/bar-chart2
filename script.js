@@ -33,7 +33,7 @@ function getNumberOfCustomers() {
 }
 
 function insertIntoHTML(number) {
-  if (number > 27) {
+  if (number > 28) {
     document.querySelector("#grid-container2").insertAdjacentHTML(
       "afterbegin",
       /*html*/ `
@@ -43,7 +43,7 @@ function insertIntoHTML(number) {
             </div>
         `
     );
-  } else if (number > 22) {
+  } else if (number > 25) {
     document.querySelector("#grid-container2").insertAdjacentHTML(
       "afterbegin",
       /*html*/ `
