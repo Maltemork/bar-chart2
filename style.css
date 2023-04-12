@@ -1,7 +1,7 @@
 body {
   font-family: Cascadia Code;
   display: flex;
-  background: linear-gradient(90deg, rgb(0, 44, 75) 0%, rgb(45, 45, 45) 100%);
+  background: linear-gradient(90deg, rgb(0, 66, 113) 0%, rgb(131, 0, 0) 100%);
   color: white;
   margin: 0px;
   justify-content: center;
@@ -30,14 +30,13 @@ h1 {
   justify-self: center;
   justify-items: center;
   overflow: hidden;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.225);
-  border-radius: 5px;
-  border-width: 3px;
-  border-color: rgb(0, 0, 0);
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 3px;
 }
 
 .grid-container2 {
-  background-color: rgb(46, 46, 46);
+  background: linear-gradient(0deg, rgb(51, 51, 51) 0%, rgb(5, 0, 56) 100%);
   display: grid;
   position: relative;
   grid-template-columns: repeat(40, 1fr);
